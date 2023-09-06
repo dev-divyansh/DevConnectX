@@ -73,6 +73,7 @@
                     android:background="@color/white"
                     android:hint="Enter Name"
                     android:padding="15dp"
+                    android:textColor="@color/dark_grey"
                     android:textSize="22dp" />
 
                 <EditText
@@ -83,6 +84,7 @@
                     android:background="@color/white"
                     android:hint="Enter BIO"
                     android:padding="15dp"
+                    android:textColor="@color/dark_grey"
                     android:textSize="22dp" />
 
                 <EditText
@@ -92,6 +94,7 @@
                     android:layout_margin="15dp"
                     android:background="@color/white"
                     android:inputType="number"
+                    android:textColor="@color/dark_grey"
                     android:hint="Enter Phone Number"
                     android:padding="15dp"
                     android:textSize="22dp" />
@@ -105,6 +108,7 @@
                     android:background="@color/white"
                     android:hint="Enter Email"
                     android:padding="15dp"
+                    android:textColor="@color/dark_grey"
                     android:textSize="22dp" />
 
                 <androidx.appcompat.widget.AppCompatButton

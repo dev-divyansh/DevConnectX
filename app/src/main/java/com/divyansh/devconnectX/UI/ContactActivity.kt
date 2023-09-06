@@ -4,6 +4,7 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.divyansh.devconnectX.Data.Adapter
 import com.divyansh.devconnectX.R
@@ -26,6 +27,10 @@ class ContactActivity : AppCompatActivity() {
                 preference.getString("user$i" , null)?.let { decompiler(it, preference) }
             }
             Log.d("dps" , data.toString())
+        }
+
+        if (counter == 0){
+            Toast.makeText(applicationContext , "No Contacts Found" , Toast.LENGTH_LONG).show()
         }
 
         // Recycler view code

@@ -30,7 +30,7 @@ class SplashActivity : AppCompatActivity() {
 
 
         lifecycleScope.launch {
-            delay(1000)
+            delay(5000)
             startActivity(intent)
             finish()
         }

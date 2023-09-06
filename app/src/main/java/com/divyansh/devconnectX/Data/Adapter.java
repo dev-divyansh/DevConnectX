@@ -2,6 +2,8 @@ package com.divyansh.devconnectX.Data;
 
 
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -37,6 +39,18 @@ public class Adapter extends RecyclerView.Adapter<Adapter.viewHolder> {
         holder.bio.setText(data.get(position).getBio());
         holder.number.setText(data.get(position).getNumber());
         holder.mail.setText(data.get(position).getMail());
+        holder.mail.setOnClickListener(
+                v -> {
+                    Intent intent = new  Intent(Intent.ACTION_VIEW , Uri.parse("mailto:${data.get(position).getMail()}"));
+                    context.startActivity(intent);
+                }
+        );
+        holder.number.setOnClickListener(
+                v->{
+                    Intent intent = new Intent(Intent.ACTION_VIEW , Uri.parse("tel:${data.get(position).getNumber()}"));
+                    context.startActivity(intent);
+                }
+        );
     }
 
     @Override

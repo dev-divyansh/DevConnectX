@@ -34,6 +34,10 @@ class ShareCardActivity : AppCompatActivity() {
              var intent = Intent(Intent.ACTION_VIEW , Uri.parse("mailto:${preference.getString("email" , "")}"))
             startActivity(intent)
         }
+        binding.number.setOnClickListener {
+            var intent = Intent(Intent.ACTION_VIEW , Uri.parse("tel:${preference.getString("number" , "")}"))
+            startActivity(intent)
+        }
 
         var editButton : FloatingActionButton = findViewById(R.id.editButton)
 
@@ -49,13 +53,14 @@ class ShareCardActivity : AppCompatActivity() {
             binding.QrCard.visibility = View.VISIBLE
             binding.Qrcode.setImageBitmap(generateQr(data))
         }
-        binding.scanQR.setOnClickListener {
+        binding.scannerlottie.setOnClickListener {
             startScanner()
         }
 
         binding.contactsbutton.setOnClickListener {
             val intent = Intent(this , ContactActivity::class.java)
             startActivity(intent)
+            finish()
         }
 
     }
